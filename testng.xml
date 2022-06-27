@@ -6,7 +6,7 @@
         <parameter name="Location-1" value="Nigeria"></parameter>
         <parameter name="Location-2" value="Ausschläger Weg, Hamburg, Germany"></parameter>
         <parameter name="Location-3" value="Pakistanische Moschee, Berlin, Germany"></parameter>
-        <parameter name="browser" value="FireFox"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="SeleniumAssignment">
             </class>
