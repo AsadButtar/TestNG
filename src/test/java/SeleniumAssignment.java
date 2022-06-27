@@ -21,5 +21,4 @@ public class SeleniumAssignment {
     public void ThirdSearch(String browser, String BaseURL, String Location) throws IOException {
         ChromeTest.SearchHotelsInChrome(browser,BaseURL,Location);
     }
-
 }

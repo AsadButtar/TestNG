@@ -18,12 +18,8 @@ import java.time.Duration;  // All imports
 
 public class ChromeTest {
 
+    static String  Rate;
     public  static WebDriver driver;
-
-//    public  ChromeTest (String URI){
-//        this.URI = URI;
-//    };
-//    public ChromeTest(){};
 
     public static void SearchHotelsInChrome(String browser, String BaseURL, String Location) throws IOException {
 
@@ -32,7 +28,7 @@ public class ChromeTest {
             System.setProperty("webdriver.chrome.driver","webdrivers/chromedriver.exe");
             driver = new ChromeDriver(); //initialize webdriver
         }else if (browser.equals("FireFox")){
-            System.setProperty("webdriver.gecko.driver","C:\\webdrivers\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver","webdrivers/geckodriver.exe");
             driver = new FirefoxDriver(); //initialize webdriver
         }
 
@@ -65,12 +61,14 @@ public class ChromeTest {
         actions.moveToElement(elem);
 
         // Fetch Price and convert into integer
-        String  Rate = driver.findElement(By.cssSelector("[class='rate-tile rate-tile--selected'] span[class='m0']")).getText();
+        Rate = driver.findElement(By.cssSelector("[class='rate-tile rate-tile--selected'] span[class='m0']")).getText();
         System.out.print(Rate);
 
         //Replacing all characters except numbers
         Rate = Rate.replaceAll("[^0-9.]","");//Replace anything wil space other than numbers
         float Float_Rate = Float.parseFloat(Rate);
         System.out.print(Float_Rate);
+        driver.quit();
+
     }
 }
