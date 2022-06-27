@@ -42,7 +42,7 @@
             <version>3.0.0-M7</version>
             <configuration>
                 <suiteXmlFiles>
-                    <suiteXmlFile>"testing.xml"</suiteXmlFile>
+                    <suiteXmlFile>testing.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>
